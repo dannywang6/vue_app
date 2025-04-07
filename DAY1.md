@@ -17,4 +17,4 @@ src文件夹（程序员源代码文件夹）
   babel.config.js：配置文件（Babel相关）
   package.json :认为是项目的身份证，项目叫做什么，有哪些依赖，怎么运行。
   package-lock.json：缓存性文件
-  README.md:说明性文件
+  README.md:说明性文件哈哈
