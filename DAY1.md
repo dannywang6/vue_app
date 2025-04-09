@@ -19,4 +19,59 @@
   package-lock.json：缓存性文件
   README.md:说明性文件
   
-2:
+2:项目的其他配置：
+  2.1项目运行时 自动打开浏览器：
+  ---package.json
+    "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+    },
+
+2.2 eslint校验工具关闭：
+  ---在根目录下，创建一个vue.config.js文件
+        module.exports = {
+        //关闭eslint
+        lintOnSave :false
+        }
+
+比如声明一个变量 但是没有用 正常可能无法运行 但是关闭eslint之后 就可以正常运行了
+
+2.3 src文件夹简写方法，配置别名：
+
+            {
+      "compilerOptions": {
+      "target": "es5",
+      "module": "esnext",
+      "baseUrl": "./",
+      "moduleResolution": "node",
+      "paths": {
+      "@/*": [
+      "src/*"
+      ]
+      },
+      "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+      ]
+      }
+      }
+  @为根目录
+
+
+3：项目路由的分析：
+  vue-router
+  前端所谓的路由：KV键值对。
+  key: URL (地址栏中对应的路径)
+  value：相应的路由组件
+  注意：上中下结构
+
+  路由组件：
+  Home首页路由组件，Search路由组件，Login路由组件；
+  非路由组件：
+  Header(首页，搜索页面)
+  Footer(在登录页没有)
+  
+  
