@@ -1,7 +1,11 @@
 <template>
   <div id="app">
 <Header></Header>
-    <Footer></Footer>
+<!--    路由组件出口的地方-->
+    <router-view></router-view>
+<!--   Footer 在Home，Search中显示 在Login，Register中隐藏-->
+<!--    <Footer v-show="$route.path=='/home'||$route.path=='/search'"></Footer>-->
+    <Footer v-show="$route.meta.showFooter"></Footer>
   </div>
 </template>
 
